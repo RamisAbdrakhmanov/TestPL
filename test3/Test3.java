@@ -11,7 +11,7 @@ public class Test3 {
 
         HashMap<Long, String> values = new HashMap<>();
 
-        while (valuesReader.ready()) {              // разбиваем values.json на  хеш-таблицу
+        while (valuesReader.ready()) {      // разбиваем values.json на  хеш-таблицу
             String s = valuesReader.readLine().replaceAll("\\D", "");
             if (s.length() > 0) {
                 long id = Long.parseLong(s);
