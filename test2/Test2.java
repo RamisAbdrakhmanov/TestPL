@@ -1,13 +1,11 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Test2 {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String file1 = br.readLine();
-        String file2 = br.readLine();
+        String file1 = args[0];
+        String file2 = args[0];
 
         BufferedReader fileReader1 = new BufferedReader(new FileReader(file1));
         String[] str = fileReader1.readLine().split(" ");
@@ -15,7 +13,6 @@ public class Test2 {
         float[] center = new float[2];
         center[0] = Float.parseFloat(str[0]);
         center[1] = Float.parseFloat(str[1]);
-
 
         BufferedReader fileReader2 = new BufferedReader(new FileReader(file2));
 
@@ -36,7 +33,6 @@ public class Test2 {
             }
         }
 
-        br.close();
         fileReader1.close();
     }
 }

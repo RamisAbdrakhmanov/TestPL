@@ -3,12 +3,10 @@ import java.util.HashMap;
 
 public class Test3 {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String t = br.readLine();
-        String v = br.readLine();
+        String t = args[0];
+        String v = args[1];
 
         BufferedReader valuesReader = new BufferedReader(new FileReader(v));
-
         HashMap<Long, String> values = new HashMap<>();
 
         while (valuesReader.ready()) {      // разбиваем values.json на  хеш-таблицу
@@ -64,7 +62,6 @@ public class Test3 {
             }
         }
 
-        br.close();
         valuesReader.close();
         testsReader.close();
         reportWriter.close();
